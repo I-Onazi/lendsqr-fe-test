@@ -10,7 +10,7 @@ vi.mock("../utils/storage", () => ({
 
 // Mock the global fetch
 const mockFetch = vi.fn();
-global.fetch = mockFetch;
+vi.stubGlobal("fetch", mockFetch);
 
 describe("userService", () => {
   const mockUser: Partial<User> = { id: "usr-000001", status: "Active", username: "John Doe" };

@@ -2,17 +2,17 @@ import type { User, UserFilters } from "../types";
 import { saveUserToStorage, getUserFromStorage } from "../utils/storage";
 
 // Simulate API delay
-const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+// const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export const fetchUsers = async (): Promise<User[]> => {
   try {
     const apiUrl = import.meta.env.VITE_API_BASE_URL || "/mock-api/users.json";
     const response = await fetch(apiUrl);
-    
+
     if (!response.ok) {
       throw new Error("Failed to fetch users");
     }
-    
+
     const users: User[] = await response.json();
     return users;
   } catch (error) {
@@ -38,7 +38,7 @@ export const fetchUserById = async (id: string): Promise<User | null> => {
       await saveUserToStorage(user);
       return user;
     }
-    
+
     return null;
   } catch (error) {
     console.error("Error fetching individual user from Mock API", error);
@@ -110,9 +110,9 @@ export const updateUserStatus = async (
 ): Promise<User | null> => {
   // We can't mutate the mock REST API backend, so we simulate server action 
   // by updating our local storage cache record for this specific user.
-  
+
   let user = await getUserFromStorage(userId);
-  
+
   if (!user) {
     // Fallback if not cached yet
     const users = await fetchUsers();
