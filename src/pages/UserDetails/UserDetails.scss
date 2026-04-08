@@ -1,0 +1,173 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.user-details {
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: none;
+    border: none;
+    color: $text-secondary;
+    font-size: $font-size-base;
+    cursor: pointer;
+    margin-bottom: $spacing-xl;
+
+    &:hover {
+      color: $text-primary;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $spacing-xl;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+  }
+
+  &__title {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-medium;
+    color: $text-primary;
+  }
+
+  &__actions {
+    display: flex;
+    gap: $spacing-md;
+
+    @include mobile {
+      width: 100%;
+
+      .btn {
+        flex: 1;
+      }
+    }
+  }
+
+  &__profile-card {
+    background-color: $white;
+    border: 1px solid $border-light;
+    border-radius: $border-radius-sm;
+    box-shadow: $box-shadow;
+    margin-bottom: 30px;
+  }
+
+  &__content-card {
+    background-color: $white;
+    border: 1px solid $border-light;
+    border-radius: $border-radius-sm;
+    box-shadow: $box-shadow;
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__profile-header {
+    padding: 30px 30px 0 30px;
+  }
+
+  &__profile-info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    @include mobile {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name-tier {
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__name {
+    font-size: 22px;
+    font-weight: $font-weight-medium;
+    color: $text-primary;
+    margin-bottom: $spacing-xs;
+  }
+
+  &__account-id {
+    font-size: $font-size-sm;
+    color: $text-secondary;
+  }
+
+  &__tier-divider {
+    width: 1px;
+    height: 80px;
+    background-color: rgba($text-secondary, 0.2);
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__tier {
+    text-align: center;
+  }
+
+  &__tier-label {
+    font-size: $font-size-xs;
+    color: $text-secondary;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: $spacing-xs;
+  }
+
+  &__stars {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+  }
+
+  &__balance {
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__balance-amount {
+    font-size: 22px;
+    font-weight: $font-weight-medium;
+    color: $text-primary;
+    margin-bottom: $spacing-xs;
+  }
+
+  &__bank-info {
+    font-size: $font-size-xs;
+    color: $text-primary;
+  }
+
+  &__not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $spacing-xxl;
+    text-align: center;
+
+    h2 {
+      margin-bottom: $spacing-lg;
+      color: $text-primary;
+    }
+  }
+}
