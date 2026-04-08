@@ -1,0 +1,11 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.dashboard {
+  &__title {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-medium;
+    color: $text-primary;
+    margin-bottom: 40px;
+  }
+}
