@@ -4,11 +4,11 @@ import type { User, UserFilters as UserFiltersType } from "../../../types";
 import Badge from "../../common/Badge";
 import UserFilters from "../UserFilters";
 import { formatDate } from "../../../utils/formatters";
-import filterIcon from "../../../assets/images/filter.svg?url";
-import threeDotsIcon from "../../../assets/images/three-dots.svg?url";
-import eyeIcon from "../../../assets/images/eye.svg?url";
-import blacklistIcon from "../../../assets/images/blacklist.svg?url";
-import activateUserIcon from "../../../assets/images/activate-user.svg?url";
+const filterIcon = "/images/filter.svg";
+const threeDotsIcon = "/images/three-dots.svg";
+const eyeIcon = "/images/eye.svg";
+const blacklistIcon = "/images/blacklist.svg";
+const activateUserIcon = "/images/activate-user.svg";
 import "./UserTable.scss";
 
 interface UserTableProps {

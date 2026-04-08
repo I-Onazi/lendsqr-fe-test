@@ -38,17 +38,23 @@ const users = Array.from({ length: 500 }).map((_, index) => {
     phoneNumber: generateNigerianPhone(),
     dateJoined: faker.date.past({ years: 3 }).toISOString(),
     status: faker.helpers.arrayElement(statuses),
-    bvn: faker.string.numeric(11),
-    gender: faker.person.sexType(),
-    maritalStatus: faker.helpers.arrayElement(['Single', 'Married', 'Divorced']),
-    children: faker.number.int({ min: 0, max: 4 }),
-    residenceType: faker.helpers.arrayElement(["Parent's Apartment", 'Rented', 'Owned']),
+    tier: faker.number.int({ min: 1, max: 3 }),
+    personalInfo: {
+      fullName: `${firstName} ${lastName}`,
+      phoneNumber: generateNigerianPhone(),
+      emailAddress: email,
+      bvn: faker.string.numeric(11),
+      gender: faker.helpers.arrayElement(['Male', 'Female']),
+      maritalStatus: faker.helpers.arrayElement(['Single', 'Married', 'Divorced']),
+      children: String(faker.number.int({ min: 0, max: 4 })),
+      typeOfResidence: faker.helpers.arrayElement(["Parent's Apartment", 'Rented', 'Owned'])
+    },
     
     educationAndEmployment: {
-      level: faker.helpers.arrayElement(['B.Sc', 'M.Sc', 'PhD', 'OND', 'HND']),
+      levelOfEducation: faker.helpers.arrayElement(['B.Sc', 'M.Sc', 'PhD', 'OND', 'HND']),
       employmentStatus: faker.helpers.arrayElement(['Employed', 'Self-Employed', 'Unemployed']),
-      sector: faker.helpers.arrayElement(['FinTech', 'Health', 'Education', 'Agriculture']),
-      duration: `${faker.number.int({ min: 1, max: 10 })} years`,
+      sectorOfEmployment: faker.helpers.arrayElement(['FinTech', 'Health', 'Education', 'Agriculture']),
+      durationOfEmployment: `${faker.number.int({ min: 1, max: 10 })} years`,
       officeEmail: faker.internet.email({ provider: 'company.com' }).toLowerCase(),
       monthlyIncome: `₦${formatCurrency(faker.finance.amount({ min: 200000, max: 400000, dec: 2, symbol: '' }))} - ₦${formatCurrency(faker.finance.amount({ min: 400000, max: 800000, dec: 2, symbol: '' }))}`,
       loanRepayment: `₦${formatCurrency(faker.finance.amount({ min: 10000, max: 50000, dec: 2, symbol: '' }))}`

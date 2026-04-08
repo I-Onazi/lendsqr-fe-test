@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Input from "../../components/common/Input";
 import Button from "../../components/common/Button";
-import logo from "../../assets/images/lendsqr-logo.svg";
-import illustration from "../../assets/images/login-image.svg";
+const logo = "/images/lendsqr-logo.svg";
+const illustration = "/images/login-image.svg";
 import "./Login.scss";
 
 const Login: React.FC = () => {

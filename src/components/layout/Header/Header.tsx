@@ -78,7 +78,7 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
           className="header__search-input"
         />
         <button className="header__search-btn">
-          <img src="/src/assets/images/search.svg" alt="Search" />
+          <img src="/images/search.svg" alt="Search" />
         </button>
       </div>
 
@@ -88,7 +88,7 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
         </a>
 
         <button className="header__notification">
-          <img src="/src/assets/images/Vector.png" alt="Notifications" />
+          <img src="/images/Vector.png" alt="Notifications" />
         </button>
 
         <div className="header__profile" ref={profileRef}>
@@ -97,7 +97,7 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
             onClick={() => setShowProfileMenu(!showProfileMenu)}
           >
             <img
-              src="/src/assets/images/avatar.png"
+              src="/images/avatar.png"
               alt="Profile"
               className="header__avatar"
             />

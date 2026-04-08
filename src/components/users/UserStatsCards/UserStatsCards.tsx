@@ -1,9 +1,9 @@
 import React from "react";
 import Card from "../../common/Card";
-import usersIcon from "../../../assets/images/users2.svg";
-import activeUsersIcon from "../../../assets/images/active-users.svg";
-import usersWithLoansIcon from "../../../assets/images/users-with-loans.svg";
-import usersWithSavingsIcon from "../../../assets/images/users-with-savings.svg";
+const usersIcon = "/images/users2.svg";
+const activeUsersIcon = "/images/active-users.svg";
+const usersWithLoansIcon = "/images/users-with-loans.svg";
+const usersWithSavingsIcon = "/images/users-with-savings.svg";
 import "./UserStatsCards.scss";
 
 interface UserStatsCardsProps {

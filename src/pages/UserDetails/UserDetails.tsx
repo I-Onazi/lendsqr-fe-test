@@ -5,8 +5,8 @@ import { fetchUserById } from "../../services/userService";
 import { UserDetailsTabs, tabs } from "../../components/users/UserDetailsTabs/UserDetailsTabs";
 import Button from "../../components/common/Button";
 import Loader from "../../components/common/Loader";
-import backIcon from "../../assets/images/back.svg";
-import avatarIcon from "../../assets/images/info-avatar.svg";
+const backIcon = "/images/back.svg";
+const avatarIcon = "/images/info-avatar.svg";
 import "./UserDetails.scss";
 
 const StarFilledIcon = () => (
