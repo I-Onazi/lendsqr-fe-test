@@ -1,0 +1,80 @@
+// Colors from Figma design
+$primary-teal: #39cdcc;
+$primary-teal-light: rgba(57, 205, 204, 0.06);
+$secondary-blue: #213f7d;
+$background: #fbfbfb;
+$white: #ffffff;
+
+// Text colors
+$text-primary: #213f7d;
+$text-secondary: #545f7d;
+$text-muted: #545f7d;
+
+// Status colors
+$status-active: #39cd62;
+$status-active-bg: rgba(57, 205, 98, 0.06);
+$status-inactive: #545f7d;
+$status-inactive-bg: rgba(84, 95, 125, 0.06);
+$status-pending: #e9b200;
+$status-pending-bg: rgba(233, 178, 0, 0.1);
+$status-blacklisted: #e4033b;
+$status-blacklisted-bg: rgba(228, 3, 59, 0.1);
+
+// Border colors
+$border-color: #545f7d26;
+$border-light: rgba(33, 63, 125, 0.06);
+
+// Shadow
+$box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+$box-shadow-dropdown: 3px 5px 20px rgba(0, 0, 0, 0.04);
+
+// Typography
+$font-family: "Work Sans", sans-serif;
+$font-family-secondary: "SF Compact Display", "Work Sans", sans-serif;
+
+// Font sizes
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 24px;
+$font-size-xxl: 40px;
+
+// Font weights
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Spacing
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 40px;
+
+// Border radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 20px;
+
+// Sidebar
+$sidebar-width: 283px;
+$sidebar-collapsed-width: 60px;
+
+// Header
+$header-height: 100px;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+// Z-index
+$z-index-dropdown: 1000;
+$z-index-modal: 1050;
+$z-index-sidebar: 100;
+$z-index-header: 200;
