@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Badge > Snapshots > should match snapshot for Active status 1`] = `
+<span
+  class="badge badge--active"
+>
+  Active
+</span>
+`;
+
+exports[`Badge > Snapshots > should match snapshot for Blacklisted status 1`] = `
+<span
+  class="badge badge--blacklisted"
+>
+  Blacklisted
+</span>
+`;

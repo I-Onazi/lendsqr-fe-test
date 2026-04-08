@@ -1,0 +1,91 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.btn {
+  @include button-base;
+
+  &--primary {
+    background-color: $primary-teal;
+    color: $white;
+
+    &:hover:not(:disabled) {
+      background-color: darken($primary-teal, 10%);
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: $text-primary;
+    border: 1px solid $text-primary;
+
+    &:hover:not(:disabled) {
+      background-color: $text-primary;
+      color: $white;
+    }
+  }
+
+  &--outline-danger {
+    background-color: transparent;
+    color: $status-blacklisted;
+    border: 1px solid $status-blacklisted;
+
+    &:hover:not(:disabled) {
+      background-color: $status-blacklisted;
+      color: $white;
+    }
+  }
+
+  &--outline-teal {
+    background-color: transparent;
+    color: $primary-teal;
+    border: 1px solid $primary-teal;
+
+    &:hover:not(:disabled) {
+      background-color: $primary-teal;
+      color: $white;
+    }
+  }
+
+  &--small {
+    padding: 6px 12px;
+    font-size: $font-size-xs;
+  }
+
+  &--medium {
+    padding: 12px 24px;
+    font-size: $font-size-sm;
+  }
+
+  &--large {
+    padding: 16px 32px;
+    font-size: $font-size-base;
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--loading {
+    position: relative;
+    color: transparent;
+  }
+
+  &__spinner {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.75s linear infinite;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

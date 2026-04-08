@@ -1,0 +1,48 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.stat-card {
+  background-color: $white;
+  border: 1px solid $border-light;
+  border-radius: 4px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.04);
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg,
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__label {
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: $text-secondary;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  &__value {
+    font-family: "Work Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: $text-primary;
+    white-space: nowrap;
+  }
+}
