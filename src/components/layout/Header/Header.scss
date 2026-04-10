@@ -24,6 +24,15 @@
     align-items: center;
     width: $sidebar-width - 30px;
     flex-shrink: 0;
+
+    @include tablet {
+      width: auto;
+      margin-right: 20px;
+    }
+
+    @include mobile {
+      width: auto;
+    }
   }
 
   &__logo {
@@ -47,7 +56,7 @@
     }
 
     @include tablet {
-      width: 280px;
+      width: 220px;
     }
   }
 
@@ -97,6 +106,10 @@
 
     @include mobile {
       gap: $spacing-md;
+    }
+
+    @include tablet {
+      gap: $spacing-md; // 16px instead of 30px
     }
   }
 
